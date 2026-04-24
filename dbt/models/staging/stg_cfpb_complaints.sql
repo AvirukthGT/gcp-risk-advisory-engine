@@ -23,10 +23,16 @@ renamed_and_cast AS (
         submitted_via,
         company_response,
         
-        -- Booleans
-        CAST(timely AS BOOLEAN) AS is_timely_response,
-        CAST(has_narrative AS BOOLEAN) AS has_narrative,
+        -- Booleans (Bulletproof handling for unstable Parquet schemas)
+        CASE 
+            WHEN LOWER(CAST(timely AS STRING)) IN ('yes', 'true', '1') THEN TRUE 
+            ELSE FALSE 
+        END AS is_timely_response,
         
+        CASE 
+            WHEN LOWER(CAST(has_narrative AS STRING)) IN ('yes', 'true', '1') THEN TRUE 
+            ELSE FALSE 
+        END AS has_narrative,
         -- Text / NLP fields
         complaint_what_happened AS complaint_narrative
 
