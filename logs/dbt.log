@@ -1,0 +1,87 @@
+==================== 2026-04-24T05:53:26.004538Z | 019dbe0c-d7cf-70b0-ba44-85098581dbd8 ====================
+05:53:26.010066 [info ]: Installing dbt project and profile setup
+05:53:26.037570 [info ]: Info Created .vscode/extensions.json with dbt extension recommendation
+05:53:26.041439 [info ]: Success Project created successfully!
+05:53:26.041960 [info ]: Info Project name: jaffle_shop
+05:53:26.042324 [info ]: Info Project directory: jaffle_shop
+05:53:26.042705 [info ]: Info Setting up your profile...
+05:53:26.057985 [info ]: Loading ~/.dbt/profiles.yml
+05:53:26.085449 [info ]: Info Creating new profile...
+05:53:29.958428 [info ]: No dbt_cloud.yml found - proceeding without cloud pre-population
+05:54:21.720762 [info ]: Success Profile written to C:\Users\User\.dbt\profiles.yml
+05:54:21.721713 [info ]: Validating profile inputs, adapters, and connection
+
+05:54:21.721945 [info ]: dbt-fusion 2.0.0-preview.94
+05:54:21.727485 [info ]: Started loading project
+05:54:21.761583 [info ]: Loading ~/.dbt/profiles.yml
+05:54:21.784093 [info ]: Finished loading project [  0.06s]
+05:54:21.788487 [info ]: Started debugging
+05:54:21.789025 [info ]: Debugging profile: dev
+05:54:21.789306 [info ]: Debugging dbt version: 2.0.0-preview.94
+05:54:21.789647 [info ]: Debugging platform: windows x86_64 (windows)
+05:54:21.790186 [info ]: Debugging adapter type: bigquery (remote)
+05:54:21.811703 [info ]: Debugging dependencies:
+  git: OK
+05:54:21.815470 [info ]: Debugging connection:
+  "database": "cfpb_engine_dbt",
+  "schema": "cfpb_silver",
+  "method": "oauth",
+  "location": "us-east1",
+  "dataproc_batch": null
+05:54:25.762370 [debug]: Query executed on node unknown:
+select 1 as id
+05:54:26.765246 [info ]: Finished debugging [  4.98s]
+05:54:26.765477 [error]: dbt1011: [BigQuery] googleapi: Error 400: Invalid project ID 'cfpb_engine_dbt'. Project IDs must contain 6-63 lowercase letters, digits, or dashes. Some project IDs also include domain name separated by a colon. IDs must start with a letter and may not end with a dash., invalid
+05:54:27.478615 [info ]: New version available 2.0.0-preview.173 (run `dbt system update`)
+05:54:27.545370 [info ]: 
+==================== Execution Summary =====================
+Finished 'init' with 1 error for target 'dev' [1m 2s]
+==================== 2026-04-24T05:55:37.981400Z | 019dbe0e-db7b-7f80-bc80-3dada29670b1 ====================
+05:55:37.981483 [info ]: Installing dbt project and profile setup
+05:55:37.996966 [info ]: Info Created .vscode/extensions.json with dbt extension recommendation
+05:55:37.997332 [info ]: Success Project created successfully!
+05:55:37.997503 [info ]: Info Project name: jaffle_shop
+05:55:37.997626 [info ]: Info Project directory: jaffle_shop
+05:55:37.997777 [info ]: Info Setting up your profile...
+05:55:37.998345 [info ]: Loading ~/.dbt/profiles.yml
+05:55:38.000655 [info ]: Profile 'jaffle_shop' already exists. You can choose how to proceed.
+==================== 2026-04-24T05:58:21.015157Z | 019dbe11-5855-7af3-8985-2ac61637cb8a ====================
+05:58:21.015238 [info ]: Installing dbt project and profile setup
+05:58:21.017302 [info ]: Warning Directory 'jaffle_shop' already exists, using 'jaffle_shop_1' instead
+05:58:21.027517 [info ]: Info Created .vscode/extensions.json with dbt extension recommendation
+05:58:21.027725 [info ]: Success Project created successfully!
+05:58:21.027824 [info ]: Info Project name: jaffle_shop_1
+05:58:21.027945 [info ]: Info Project directory: jaffle_shop_1
+05:58:21.028029 [info ]: Info Setting up your profile...
+05:58:21.028427 [info ]: Loading ~/.dbt/profiles.yml
+05:58:21.029210 [info ]: Info Creating new profile...
+05:58:29.358249 [info ]: No dbt_cloud.yml found - proceeding without cloud pre-population
+05:59:06.310800 [info ]: Success Profile written to C:\Users\User\.dbt\profiles.yml
+05:59:06.310952 [info ]: Validating profile inputs, adapters, and connection
+
+05:59:06.311132 [info ]: dbt-fusion 2.0.0-preview.94
+05:59:06.311380 [info ]: Started loading project
+05:59:06.313492 [info ]: Loading ~/.dbt/profiles.yml
+05:59:06.318567 [info ]: Finished loading project [  0.01s]
+05:59:06.318738 [info ]: Started debugging
+05:59:06.318833 [info ]: Debugging profile: dev
+05:59:06.318924 [info ]: Debugging dbt version: 2.0.0-preview.94
+05:59:06.319148 [info ]: Debugging platform: windows x86_64 (windows)
+05:59:06.319344 [info ]: Debugging adapter type: bigquery (remote)
+05:59:06.338982 [info ]: Debugging dependencies:
+  git: OK
+05:59:06.339516 [info ]: Debugging connection:
+  "database": "cfpb-risk",
+  "schema": "cfpb-silver",
+  "method": "oauth",
+  "location": "us-east1",
+  "dataproc_batch": null
+05:59:11.840050 [debug]: Query executed on node unknown:
+select 1 as id
+05:59:11.849184 [info ]: Debugging connection test: OK
+05:59:11.850519 [info ]: Debugged All checks passed!
+05:59:11.850765 [info ]: Finished debugging [  5.53s]
+05:59:12.609570 [info ]: New version available 2.0.0-preview.173 (run `dbt system update`)
+05:59:12.649086 [info ]: 
+==================== Execution Summary =====================
+Finished 'init' successfully for target 'dev' [51.6s]

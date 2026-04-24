@@ -1,0 +1,9 @@
+version: 2
+
+sources:
+  - name: cfpb_bronze
+    description: "The raw data lake landing zone for CFPB complaints."
+    database: cfpb-risk 
+    tables:
+      - name: raw_complaints
+        description: "Raw parquet dump from local Postgres CDC extraction."
