@@ -1,0 +1,11 @@
+version: 2
+
+models:
+  - name: stg_cfpb_complaints
+    description: "Cleaned and standardized CFPB complaints data (Silver Layer)."
+    columns:
+      - name: complaint_id
+        description: "The primary key for a complaint event."
+        tests:
+          - unique
+          - not_null

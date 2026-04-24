@@ -1,0 +1,42 @@
+version: 2
+
+models:
+  - name: dim_companies
+    description: "Dimension table for financial institutions."
+    columns:
+      - name: company_id
+        tests:
+          - unique
+          - not_null
+
+  - name: dim_products
+    description: "Dimension table for financial products and sub-products."
+    columns:
+      - name: product_id
+        tests:
+          - unique
+          - not_null
+
+  - name: fact_complaints
+    description: "Central fact table for complaint events."
+    columns:
+      - name: complaint_id
+        tests:
+          - unique
+          - not_null
+          
+      - name: company_id
+        description: "Foreign key to dim_companies."
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_companies')
+              field: company_id
+              
+      - name: product_id
+        description: "Foreign key to dim_products."
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_products')
+              field: product_id
